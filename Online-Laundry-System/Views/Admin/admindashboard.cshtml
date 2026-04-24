@@ -1,0 +1,139 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Online_Laundry_System.Models.AdminDashboardViewModel
+@* Admin Dashboard View *@
+
+<header class="header">
+    <h1 class="header-title">Admin</h1>
+    <a asp-controller="Admin" asp-action="Logout" class="btn btn-danger">Logout</a>
+</header>
+
+<nav class="sidebar">
+    <ul class="sidebar-menu">
+        <li class="sidebar-item active" data-target="dashboard">📊 Dashboard</li>
+        <li class="sidebar-item" data-target="users">👥 Users</li>
+        <li class="sidebar-item" data-target="invoices">📄 Invoices</li>
+    </ul>
+</nav>
+
+<main class="main-content">
+
+    <!-- Dashboard View -->
+    <section id="dashboard" class="view-section active">
+        <h2>Dashboard</h2>
+        <div class="dashboard-stats">
+            <div class="stat-card users">
+                <h3>Total Users</h3>
+                <div class="number">@Model.Users.Count()</div>
+            </div>
+            <div class="stat-card invoices">
+                <h3>Total Invoices</h3>
+                <div class="number">@Model.Invoices.Count()</div>
+            </div>
+        </div>
+        <div class="welcome-section">
+            <h1>Welcome to Admin Dashboard</h1>
+            <p>Manage your users and invoices from the sidebar menu</p>
+        </div>
+    </section>
+
+    <!-- Users Table -->
+    <section id="users" class="view-section">
+        <div class="content-card">
+            <div class="content-header"><h2>Users Management</h2></div>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in Model.Users) 
+                        {
+                            <tr>
+                                <td>@user.fullName</td>
+                                <td>@user.lastName</td>
+                                <td>@user.Email</td>
+                                <td>@user.Password</td>
+                                <td>
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td> 
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invoices Table -->
+    <section id="invoices" class="view-section">
+        <div class="content-card">
+            <div class="content-header"><h2>Invoices Management</h2></div>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>OrderID</th>
+                            <th>CustomerName</th>
+                            <th>Phone</th>
+                            <th>Address</th> 
+                            <th>TotalItems</th>
+                            <th>TotalAmount</th>
+                            <th>Status</th>
+                            <th>Pants</th>
+                            <th>Jeans</th>
+                            <th>Shirts</th>
+                            <th>Bedsheets</th>
+                            <th>pillowCover</th>
+                            <th>Blanket</th>
+                            <th>Other</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="invoicesTableBody">
+                        @foreach (var invoice in Model.Invoices)
+                        {
+                            <tr>
+                                <td>@invoice.orderId</td>
+                                <td>@invoice.customerName</td>
+                                <td>@invoice.Phone</td>
+                                <td>@invoice.Address</td>
+                                <td>@invoice.totalItems</td>
+                                <td>@invoice.totalAmount</td>
+                                <td>@invoice.status</td>
+                                <td>@invoice.pants</td>
+                                <td>@invoice.jeans</td>
+                                <td>@invoice.shirts</td>
+                                <td>@invoice.bedSheets</td>
+                                <td>@invoice.pillowCovers</td>
+                                <td>@invoice.blankets</td>
+                                <td>@invoice.others</td>
+                                <td>
+                                    <button class="edit-btn">Edit</button> 
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>&copy; 2024 Admin Dashboard. All rights reserved.</p>
+</footer>
+
+
+
+

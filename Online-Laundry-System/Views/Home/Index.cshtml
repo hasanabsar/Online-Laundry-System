@@ -1,0 +1,133 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+ <div class="Banner">
+     <div class="Banner-content">
+         <h1 class="text-white"><i>Online Laundry System</i></h1> 
+        <p>Schedule a pickup online and get your laundry cleaned and delivered to your doorstep.</p>
+        <a class="btn btn-warning" asp-controller="Order" asp-action="createOrder"> Create Order</a>
+    </div> 
+</div> 
+
+<div class="container-services" id="services">
+
+    <!-- Services Section -->
+    <section>
+        <h2>Our Services</h2>
+        <div class="card-grid">
+            <!-- Washing -->
+            <div class="card service-card">
+                <img src="/images/Washing.jpg"
+                     alt="Washing Machine">
+                <div class="service-content">
+                    <h3>Washing</h3>
+                    <p>Machine wash, softener, and fold – fresh and clean every time.</p>
+                </div>
+            </div>
+            <!-- Dry Cleaning -->
+            <div class="card service-card">
+                <img src="/images/dry-cleaning.webp"
+                     alt="Dry Cleaning">
+                <div class="service-content">
+                    <h3>Dry Cleaning</h3>
+                    <p>Professional care for delicate fabrics and special garments.</p>
+                </div>
+            </div>
+            <!-- Iron -->
+            <div class="card service-card">
+                <img src="/images/iron.webp"
+                     alt="Ironing">
+                <div class="service-content">
+                    <h3>Iron</h3>
+                    <p>Perfectly pressed clothes, wrinkle-free and crisp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <!-- Pricing Section (No Images) -->
+<div class="container" id="pricing"> 
+    <section>
+        <h2>Pricing Plans</h2>
+        <div class="card-grid">
+            <!-- Silver -->
+            <div class="card pricing-card silver">
+                <h3>Silver</h3>
+                <div class="price">$29 <span>/ month</span></div>
+                <ul class="features">
+                    <li>10 items washed</li>
+                    <li>5 items dry cleaned</li>
+                    <li>Free ironing</li>
+                    <li>Standard delivery</li>
+                </ul>
+                <a href="#" class="btns">Choose Silver</a>
+            </div>
+            <!-- Golden -->
+            <div class="card pricing-card golden">
+                <h3>Golden</h3>
+                <div class="price">$49 <span>/ month</span></div>
+                <ul class="features">
+                    <li>20 items washed</li>
+                    <li>10 items dry cleaned</li> 
+                    <li>Free ironing</li>
+                    <li>Pickup & delivery</li>
+                    <li>Priority support</li>
+                </ul>
+                <a href="#" class="btns">Choose Golden</a>
+            </div>
+            <!-- Platinum -->
+            <div class="card pricing-card platinum">
+                <h3>Platinum</h3>
+                <div class="price">$79 <span>/ month</span></div>
+                <ul class="features">
+                    <li>Unlimited washing</li>
+                    <li>Unlimited dry cleaning</li>
+                    <li>Unlimited ironing</li>
+                    <li>Express service</li>
+                    <li>24/7 dedicated support</li>
+                    <li>Free pick & drop</li>
+                </ul>
+                <a href="#" class="btns">Choose Platinum</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+ @* CONTACT FORM *@
+
+<section id="contact" class="py-5 bg-light">
+    <div class="container"> 
+        <h2 class="text-center mb-4">Contact Us</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form class="p-4 shadow rounded bg-white">
+
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" rows="4" placeholder="Write your message" required></textarea>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">
+                            Send Message
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

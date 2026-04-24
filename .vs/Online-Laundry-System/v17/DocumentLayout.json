@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\Online-Laundry-System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3D1103D8-7DA5-46BD-AFB1-8281D95C0119}|Online-Laundry-System\\Online-Laundry-System.csproj|c:\\users\\pc\\desktop\\online-laundry-system\\online-laundry-system\\views\\resgistration\\regis.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3D1103D8-7DA5-46BD-AFB1-8281D95C0119}|Online-Laundry-System\\Online-Laundry-System.csproj|solutionrelative:online-laundry-system\\views\\resgistration\\regis.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D1103D8-7DA5-46BD-AFB1-8281D95C0119}|Online-Laundry-System\\Online-Laundry-System.csproj|c:\\users\\pc\\desktop\\online-laundry-system\\online-laundry-system\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3D1103D8-7DA5-46BD-AFB1-8281D95C0119}|Online-Laundry-System\\Online-Laundry-System.csproj|solutionrelative:online-laundry-system\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D1103D8-7DA5-46BD-AFB1-8281D95C0119}|Online-Laundry-System\\Online-Laundry-System.csproj|c:\\users\\pc\\desktop\\online-laundry-system\\online-laundry-system\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D1103D8-7DA5-46BD-AFB1-8281D95C0119}|Online-Laundry-System\\Online-Laundry-System.csproj|solutionrelative:online-laundry-system\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "regis.cshtml",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Online-Laundry-System\\Online-Laundry-System\\Views\\Resgistration\\regis.cshtml",
+              "RelativeDocumentMoniker": "Online-Laundry-System\\Views\\Resgistration\\regis.cshtml",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Online-Laundry-System\\Online-Laundry-System\\Views\\Resgistration\\regis.cshtml",
+              "RelativeToolTip": "Online-Laundry-System\\Views\\Resgistration\\regis.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACwAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-04T12:03:41.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "admindashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Online-Laundry-System\\Online-Laundry-System\\Views\\Admin\\admindashboard.cshtml",
+              "RelativeDocumentMoniker": "Online-Laundry-System\\Views\\Admin\\admindashboard.cshtml",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Online-Laundry-System\\Online-Laundry-System\\Views\\Admin\\admindashboard.cshtml",
+              "RelativeToolTip": "Online-Laundry-System\\Views\\Admin\\admindashboard.cshtml",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwDsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-28T18:57:35.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Online-Laundry-System\\Online-Laundry-System\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Online-Laundry-System\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Online-Laundry-System\\Online-Laundry-System\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Online-Laundry-System\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA1wA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T18:57:03.271Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

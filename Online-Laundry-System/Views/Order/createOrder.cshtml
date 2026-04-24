@@ -1,0 +1,113 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+    @model Online_Laundry_System.Models.Order
+
+     @if (ViewBag.Message != null)
+    {
+        <script>
+            alert("@ViewBag.Message")
+        </script>
+    } 
+
+    <div class="container my-5">
+        <div class="card shadow p-4">
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                <h2>Create Order</h2>
+                <div>
+                <form asp-controller="Resgistration" asp-action="Logout" method="post">
+                    <button type="submit" class="btn btn-danger">Logout</button>
+                </form>
+                </div> 
+            </div>
+             <form asp-action="createOrder" method="post">
+                <div class="row g-3"> 
+
+                    <!-- Order Info -->
+                    <div class="col-md-4"> 
+                        <label class="form-label">Order ID</label>
+                    <input type="text" asp-for="orderId" class="form-control" placeholder="Enter Order ID" required>
+                    </div> 
+
+                    <div class="col-md-4">
+                        <label class="form-label">Customer Name</label>
+                        <input type="text" asp-for="customerName" class="form-control" placeholder="Enter Customer Name" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Phone No</label>
+                        <input type="text" asp-for="Phone" class="form-control" placeholder="03XXXXXXXXX" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label">Address</label>
+                        <textarea class="form-control" asp-for="Address" rows="2" placeholder="Enter Address" required></textarea>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Total Items</label>
+                    <input type="number" asp-for="totalItems" class="form-control" placeholder="0" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Total Amount</label>
+                        <input type="number" asp-for="totalAmount" class="form-control" placeholder="PKR" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Status</label>
+                        <select class="form-select" asp-for="status">
+                            <option selected>Select Status</option>
+                            <option>Pending</option>
+                            <option>Processing</option>
+                            <option>Completed</option>
+                            <option>Delivered</option>
+                        </select>
+                    </div>
+
+                    <!-- Laundry Items -->
+                    <hr class="my-4">
+                    <h5 class="mb-3">Laundry Items</h5>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Pants</label>
+                        <input type="number" asp-for="pants" class="form-control" placeholder="0" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Jeans</label>
+                        <input type="number" asp-for="jeans" class="form-control" placeholder="0" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Shirts</label>
+                        <input type="number" asp-for="shirts" class="form-control" placeholder="0" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Bed Sheets</label>
+                        <input type="number" asp-for="bedSheets" class="form-control" placeholder="0" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Pillow Covers</label>
+                        <input type="number" asp-for="pillowCovers" class="form-control" placeholder="0" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Blankets</label>
+                        <input type="number" asp-for="blankets" class="form-control" placeholder="0" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Others</label>
+                        <input type="number" asp-for="others" class="form-control" placeholder="0" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-custom">Submit</button> 
+
+                </div>
+            </form>
+        </div>
+    </div>

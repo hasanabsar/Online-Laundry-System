@@ -1,0 +1,216 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <!-- TOP BAR -->
+    <nav class="navbar topbar px-3 py-3">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="fw-bold fs-5">Customer</div>
+            <button class="btn btn-primary btn-sm px-4">Logout</button>
+        </div>
+    </nav>
+
+    <!-- LAYOUT -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- SIDEBAR -->
+            <div class="col-12 col-md-3 col-lg-2 sidebar">
+
+                <a class="side-link active" href="#" onclick="openSection('dashboard', this)">
+                    <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
+
+                <a class="side-link" href="#" onclick="openSection('book', this)">
+                    <i class="bi bi-bag-check"></i> Book Order
+                </a>
+
+                <a class="side-link" href="#" onclick="openSection('orders', this)">
+                    <i class="bi bi-receipt"></i> My Orders
+                </a>
+
+                <a class="side-link" href="#" onclick="openSection('profile', this)">
+                    <i class="bi bi-person"></i> Profile
+                </a>
+
+            </div>
+
+            <!-- MAIN -->
+            <div class="col-12 col-md-9 col-lg-10 main">
+
+                <!-- DASHBOARD SECTION -->
+                <div id="dashboard" class="section active">
+
+                    <h2 class="fw-bold mb-3">Dashboard</h2>
+
+                    <div class="row g-4 mb-4">
+                        <div class="col-12 col-lg-6">
+                            <div class="stat-card top-accent p-4">
+                                <div class="text-muted text-uppercase small fw-semibold">Total Orders</div>
+                                <div class="display-6 fw-bold mt-2" id="totalOrders">0</div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6">
+                            <div class="stat-card p-4">
+                                <div class="text-muted text-uppercase small fw-semibold">Pending Orders</div>
+                                <div class="display-6 fw-bold mt-2" id="pendingOrders">0</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="big-panel">
+                        <h2 class="fw-bold mb-2">Welcome to Customer Dashboard</h2>
+                        <p class="text-muted mb-4">Manage your pickup orders from the sidebar menu.</p>
+
+                        <div class="d-flex justify-content-center gap-2 flex-wrap">
+                            <button class="btn btn-primary px-4" onclick="openSection('book', document.querySelectorAll('.side-link')[1])">
+                                Book New Order
+                            </button>
+                            <button class="btn btn-outline-primary px-4" onclick="openSection('orders', document.querySelectorAll('.side-link')[2])">
+                                View My Orders
+                            </button>
+                        </div>
+                    </div>
+
+                    <footer class="mt-4">© 2024 Customer Dashboard. All rights reserved.</footer>
+                </div>
+
+                <!-- BOOK ORDER SECTION -->
+                <div id="book" class="section">
+
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h2 class="fw-bold mb-0">Book Pickup</h2>
+                    </div>
+
+                    <div id="confirmationBox" class="alert alert-success d-none"></div>
+
+                    <div class="stat-card p-4">
+                        <form id="orderForm" class="row g-3">
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Select Service Type</label>
+                                <select class="form-select" id="serviceType" required>
+                                    <option value="" selected disabled>Choose...</option>
+                                    <option value="Piece Wise">Piece Wise</option>
+                                    <option value="Weight Wise">Weight Wise</option>
+                                    <option value="Package">Package</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label class="form-label fw-semibold">Pickup Date</label>
+                                <input type="date" class="form-control" id="pickupDate" required />
+                            </div>
+
+                            <div class="col-md-3">
+                                <label class="form-label fw-semibold">Pickup Time</label>
+                                <input type="time" class="form-control" id="pickupTime" required />
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Address</label>
+                                <input type="text" class="form-control" id="address"
+                                       value="House 12, Street 7, City" required />
+                                <div class="form-text">Editable address (auto filled).</div>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Special Instructions</label>
+                                <textarea class="form-control" id="instructions" rows="3"
+                                      placeholder="Example: Call before arriving..."></textarea>
+                            </div>
+
+                            <div class="col-12 d-grid mt-2">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    Submit Order
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- MY ORDERS SECTION -->
+                <div id="orders" class="section">
+
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h2 class="fw-bold mb-0">My Orders</h2>
+                    </div>
+
+                    <div class="stat-card p-4">
+                        <div class="table-responsive">
+                            <table class="table align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Order No</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Total Amount</th>
+                                        <th>Payment Status</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="ordersTableBody">
+                                    <tr class="text-muted">
+                                        <td colspan="5">No orders yet. Book a pickup to see it here.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="text-muted small mt-2">
+                            Status: Pending • Processing • Ready • Delivered
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- PROFILE SECTION -->
+                <div id="profile" class="section">
+
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h2 class="fw-bold mb-0">Profile</h2>
+                    </div>
+
+                    <div class="stat-card p-4">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Full Name</label>
+                                <input class="form-control" value="Customer Name">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Phone</label>
+                                <input class="form-control" value="+92 300 0000000">
+                            </div>
+
+
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Email</label>
+                                <input class="form-control" value="example@gmail.com">
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Password</label>
+                                <input class="form-control" value="12345678">
+                            </div>
+
+
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Default Address</label>
+                                <input class="form-control" value="House 12, Street 7, City">
+                            </div>
+
+
+                            <div class="col-12 d-grid mt-2">
+                                <button class="btn btn-primary">Save Profile</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,106 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+    @model Online_Laundry_System.Models.Resgistration
+
+        @if(ViewBag.Message != null)
+    {
+        <script>
+            alert("@ViewBag.Message")
+        </script>
+    }
+
+    <div class="container container-wrapper">
+        <div class="registration-card">
+            <div class="row g-0">
+                <!-- Left side with image and features -->
+                <div class="col-lg-6">
+                    <div class="registration-left">
+                        <h2 class="text-white">Join Our Community</h2>
+                        <p>Create an account to access exclusive features, connect with like-minded people, and explore new opportunities.</p>
+
+                        <ul class="feature-list list-unstyled">
+                            <li><i class="fas fa-check-circle"></i> Access to premium content</li>
+                            <li><i class="fas fa-check-circle"></i> Personalized recommendations</li>
+                            <li><i class="fas fa-check-circle"></i> Connect with professionals</li>
+                            <li><i class="fas fa-check-circle"></i> Secure and private data</li>
+                            <li><i class="fas fa-check-circle"></i> 24/7 customer support</li>
+                        </ul>
+
+                        <div class="mt-4">
+                            <p><i class="fas fa-shield-alt me-2"></i> Your data is protected with advanced encryption</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side with registration form -->
+                <div class="col-lg-6">
+                    <div class="form-container">
+                        <div class="form-header">
+                            <h3>Create Account</h3>
+                            <p>Fill in your details to get started</p>
+                        </div>
+
+                    <form id="registrationForm" asp-action="regis" method="post">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                    <input type="text" asp-for="fullName" class="form-control" placeholder="First Name" required>
+                                        <label for="firstName">First Name</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" asp-for="lastName" class="form-control" placeholder="Last Name" required>
+                                        <label for="lastName">Last Name</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="email" asp-for="Email" class="form-control" placeholder="Email Address" required>
+                                        <label for="email">Email Address</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="password" asp-for="Password" class="form-control" placeholder="Confirm Password" required>
+                                        <label for="Password">Password</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="password" asp-for="confirmPassword" class="form-control" placeholder="Confirm Password" required>
+                                        <label for="confirmPassword">Confirm Password</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-register">
+                                        <i class="fas fa-user-plus me-2"></i> Create Account
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="social-login">
+                            <p>Or sign up with</p>
+                            <div class="social-icons">
+                                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="google"><i class="fab fa-google"></i></a>
+                                <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="login-link">
+                            <p>Already have an account? <a asp-controller="Resgistration" asp-action="Login">Sign In</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 

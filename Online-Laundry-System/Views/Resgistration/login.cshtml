@@ -1,0 +1,89 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <div class="container container-wrapper">
+        <div class="login-card">
+            <div class="row g-0">
+                <!-- Left side with features -->
+                <div class="col-lg-6">
+                    <div class="login-left">
+                        <h2 class="text-white">Welcome Back!</h2>
+                        <p>Sign in to access your personalized dashboard, track your progress, and connect with our community of learners and professionals.</p>
+
+                        <ul class="feature-list list-unstyled">
+                            <li><i class="fas fa-shield-alt"></i> Secure & Encrypted Login</li>
+                            <li><i class="fas fa-bolt"></i> Fast & Responsive Interface</li>
+                            <li><i class="fas fa-users"></i> Connect with Community</li>
+                            <li><i class="fas fa-chart-line"></i> Track Your Progress</li>
+                            <li><i class="fas fa-headset"></i> 24/7 Customer Support</li>
+                        </ul>
+
+                        <div class="security-note">
+                            <p><i class="fas fa-lock me-2"></i> Your data is protected with advanced encryption</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side with login form -->
+                <div class="col-lg-6">
+                    <div class="form-container">
+                        <div class="form-header">
+                            <h3>Sign In</h3>
+                            <p>Enter your credentials to access your account</p>
+                        </div>
+
+                        <form id="loginForm" method="post">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <div class="input-with-icon">
+                                    <input type="email" name="Email" class="form-control" placeholder="Enter your email address" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <div class="input-with-icon">
+                                    <input type="password" name="Password"  class="form-control" placeholder="Enter your password" required>
+                                    <button type="button" class="password-toggle" id="togglePassword">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="options-row">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label" for="rememberMe">
+                                        Remember me
+                                    </label>
+                                </div>
+                                <a href="#" class="forgot-password">Forgot Password?</a>
+                            </div>
+
+                            <button type="submit" class="btn btn-login">
+                                <i class="fas fa-sign-in-alt me-2"></i> Sign In
+                            </button>
+
+                            <div class="divider">
+                                <span>Or continue with</span>
+                            </div>
+
+                            <div class="social-login">
+                                <div class="social-icons">
+                                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="google"><i class="fab fa-google"></i></a>
+                                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="register-link">
+                                <p>Don't have an account? <a asp-controller="Resgistration" asp-action="regis">Create an account</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

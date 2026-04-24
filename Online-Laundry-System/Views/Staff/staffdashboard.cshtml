@@ -1,0 +1,82 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <!-- Header -->
+    <header class="header">
+        <h1 class="header-title">Staff</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <ul class="sidebar-menu">
+            <li class="sidebar-item active" onclick="showView('dashboard', this)">
+                <span>📊 Dashboard</span>
+            </li>
+            <li class="sidebar-item" onclick="showView('users', this)">
+                <span>👥 Users</span>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard View -->
+        <section id="dashboard" class="view-section active">
+            <h2 style="margin-bottom: 25px; font-size: 28px; color: var(--black);">Dashboard</h2>
+            <div class="dashboard-stats">
+                <div class="stat-card users">
+                    <h1>Total Users</h1>
+                    <div class="number" id="totalUsers">5</div>
+                </div>
+                <div class="welcome-section">
+                    <h1>Welcome to Admin Dashboard</h1>
+                    <p>Manage your users from the sidebar menu</p>
+                </div>
+        </section>
+
+        <!-- Users View -->
+        <section id="users" class="view-section">
+            <div class="content-card">
+                <div class="content-header">
+                    <h2>Users Management</h2>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone Number</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                            <tr>
+                                <td>1</td>
+                                <td>John Smith</td>
+                                <td>john.smith@email.com</td>
+                                <td>+1 234 567 8901</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button class="edit-btn" onclick="editUser(1)">Edit</button>
+                                        <button class="delete-btn" onclick="deleteUser(1)">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="padding: 20px 25px; border-top: 1px solid var(--border-grey);">
+                    <button class="action-btn create-btn">Create</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============footer=========== -->
+        <footer class="footer">
+            <p>&copy; 2024 Staff Dashboard. All rights reserved.</p>
+        </footer>
+    </main>}
